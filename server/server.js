@@ -66,6 +66,7 @@ function trackTickers(socket) {
   socket.on('disconnect', function() {
     clearInterval(timer);
     horses.map(horse => horse.distance = 0);
+    socket.disconnect();
   });
 }
 
