@@ -5,9 +5,8 @@ const initialState = {
 	resultList: [],
 	finished: false,
 };
-
-const raceDataSlice = createSlice({
-	name: 'raceData',
+const dataSlice = createSlice({
+	name: 'dataSlice',
 	initialState,
 	reducers: {
 		setTick: (state, action) => {
@@ -21,6 +20,5 @@ const raceDataSlice = createSlice({
 		},
 	},
 });
-
-export const raceDataReducer = raceDataSlice.reducer;
-export const { setTick, setResultList, setFinished } = raceDataSlice.actions;
+export const dataSliceReducer = dataSlice.reducer;
+export const { setTick, setResultList, setFinished } = dataSlice.actions;

@@ -5,14 +5,15 @@ import {
 	setFinished,
 	setResultList,
 	setTick,
-} from '../../store/slices/raceData.slice';
-import WinnerHorse from './WinnerHorse';
+} from '../../store/slices/dataSlice';
+import WinnerHorse from './WinnerHorse/WinnerHorse';
 import s from './ListHorses.module.css'
 import finishedLine from '../../assets/Finish-Line-PNG-HD.png'
+import tick from '../../Tickets/ticket'
 
 const ListHorses = () => {
 	const {
-		raceData: { tick },
+		dataSlice: { tick },
 		socket: { socket },
 	} = useSelector((state) => state);
 	const dispatch = useDispatch();

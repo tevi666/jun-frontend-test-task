@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { raceDataReducer } from './slices/raceData.slice';
+import { dataSliceReducer } from './slices/dataSlice';
 import { socketReducer } from './slices/socketSlice';
 
 export const store = configureStore({
-	reducer: { raceData: raceDataReducer, socket: socketReducer },
+	reducer: { dataSlice: dataSliceReducer, socket: socketReducer },
 	middleware: (getDefaultMiddleware) =>
 		getDefaultMiddleware({
 			serializableCheck: false,

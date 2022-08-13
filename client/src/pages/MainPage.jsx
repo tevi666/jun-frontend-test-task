@@ -9,12 +9,12 @@ import s from './MainPage.module.css';
 const MainPage = () => {
 	const {
 		socket: { socket },
-		raceData: { finished },
+		dataSlice: { finished },
 	} = useSelector(state => state);
 
 	useEffect(() => {
 		if (socket) {
-			socket.emit('start');
+			// socket.emit('start');
 		}
 	}, [socket]);
 

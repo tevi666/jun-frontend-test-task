@@ -5,7 +5,7 @@ import s from './Table.module.css'
 
 const Table = () => {
     const {
-        raceData: { tick, resultList },
+        dataSlice: { tick, resultList },
     } = useSelector(state => state);
 
     const mergeList = (tick, resultList) => {
@@ -23,9 +23,8 @@ const Table = () => {
             className={s.sx}
         >
             {[...mergeList(tick, resultList)].map((horse, index) => (
-                <div className={s.table}>
+                <div className={s.table} key={horse.name}>
                     <div key={horse.name}
-                    index={index}
                     >
                         <Typography
                             variant='h2'

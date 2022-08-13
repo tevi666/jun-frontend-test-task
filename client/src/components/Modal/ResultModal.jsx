@@ -1,13 +1,13 @@
 import { Button, Modal } from '@mui/material';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setFinished, setResultList } from '../../store/slices/raceData.slice';
+import { setFinished, setResultList } from '../../store/slices/dataSlice';
 import s from './ResultModal.module.css'
 
 const ResultsModal = () => {
 	const {
 		socket: { socket },
-		raceData: { resultList, finished },
+		dataSlice: { resultList, finished },
 	} = useSelector((state) => state);
 	const dispatch = useDispatch();
 
@@ -40,7 +40,7 @@ const ResultsModal = () => {
 					<div className={s.content}
 						key={item.name}
 						index={index}
-						>
+					>
 						{index + 1} place: {item.name}
 					</div>
 				))}
