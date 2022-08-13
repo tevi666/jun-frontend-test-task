@@ -1,0 +1,14 @@
+.table {
+    background-color: white;
+    color: black;
+    width: 150px;
+    position: relative;
+    opacity: 0.8;
+	font-family: fantasy;
+    border-bottom: 20px solid white;
+    margin-top: 1px;
+}
+.sx {
+    text-align: center;
+    background-color: transparent !important;
+}
