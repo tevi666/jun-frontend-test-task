@@ -18,5 +18,8 @@
   "homepage": "https://github.com/tevi666/jun-frontend-test-task#readme",
   "dependencies": {
     "heroku": "^7.62.0"
+  },
+  "engines" : {
+    "node": "16.6.0"
   }
 }
