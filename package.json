@@ -1,0 +1,22 @@
+{
+  "name": "jun-frontend-test-task",
+  "version": "1.0.0",
+  "description": "We want you to implement a small web app which can display horse betting status.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tevi666/jun-frontend-test-task.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tevi666/jun-frontend-test-task/issues"
+  },
+  "homepage": "https://github.com/tevi666/jun-frontend-test-task#readme",
+  "dependencies": {
+    "heroku": "^7.62.0"
+  }
+}
