@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import s from './Table.module.css';
 import { Typography } from '@mui/material';
-import s from './Table.module.css'
 
 const Table = () => {
     const {
@@ -28,15 +28,16 @@ const Table = () => {
                     >
                         <Typography
                             variant='h2'
-                            sx={!index && { color: 'green', fontWeight: 'bold' }}
+                            className={!index && 'text-green-700'}
                         >
                             {index + 1}
                         </Typography>
                         {horse.name}
                     </div>
                 </div>
-            ))}
-        </div>
+            ))
+            }
+        </div >
     );
 };
 

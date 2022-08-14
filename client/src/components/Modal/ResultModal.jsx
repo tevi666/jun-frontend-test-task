@@ -1,36 +1,18 @@
-import { Button, Modal } from '@mui/material';
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { setFinished, setResultList } from '../../store/slices/dataSlice';
-import s from './ResultModal.module.css'
+import { useSelector } from 'react-redux';
+import s from './ResultModal.module.css';
+import Button from '../Button/Button';
+import { Modal } from '@mui/material';
 
 const ResultsModal = () => {
+
+
 	const {
-		socket: { socket },
 		dataSlice: { resultList, finished },
-	} = useSelector((state) => state);
-	const dispatch = useDispatch();
-
-	const startNewRound = () => {
-		socket.connect();
-		socket.emit('start');
-	};
-
-	const setDefaultValues = () => {
-		dispatch(setFinished(false));
-		dispatch(setResultList([]));
-	};
-
-	const handleClose = () => {
-		setDefaultValues();
-		startNewRound();
-	};
-
+	} = useSelector(state => state);
 	return (
 		<Modal
 			open={finished}
-			aria-labelledby='parent-modal-title'
-			aria-describedby='parent-modal-description'
 		>
 			<div className={s.modal}>
 				<h1 className={s.h1}>
@@ -45,14 +27,7 @@ const ResultsModal = () => {
 					</div>
 				))}
 
-				<Button
-					className={s.btn}
-					onClick={() => {
-						handleClose();
-					}}
-				>
-					New round
-				</Button>
+				<Button />
 			</div>
 		</Modal>
 	);

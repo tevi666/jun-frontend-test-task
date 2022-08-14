@@ -14,7 +14,7 @@ const MainPage = () => {
 
 	useEffect(() => {
 		if (socket) {
-			// socket.emit('start');
+			console.log('started game');
 		}
 	}, [socket]);
 

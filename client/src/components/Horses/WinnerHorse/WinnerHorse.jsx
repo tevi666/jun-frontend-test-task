@@ -1,6 +1,6 @@
 import React from 'react';
 import { Slider } from '@mui/material';
-import s from './WinnerHorse.module.css'
+import s from './WinnerHorse.module.css';
 
 const WinnerHorse = ({ horse }) => {
 	return (
